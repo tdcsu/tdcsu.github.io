@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tdcsu.github.io/about/index.html</loc>
+    
+    <lastmod>2023-09-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://tdcsu.github.io/2023/09/11/%E4%BA%BA%E7%94%9F%E4%B8%89%E9%97%AE/</loc>
     
     <lastmod>2023-09-11</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>http://tdcsu.github.io/tags/index.html</loc>
-    
-    <lastmod>2023-09-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://tdcsu.github.io/about/index.html</loc>
     
     <lastmod>2023-09-11</lastmod>
     
