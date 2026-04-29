@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELCOR Supplementary Videos</title>
+  <meta name="description" content="Supplementary videos for ELCOR-based LiDAR local navigation in unknown environments.">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <style>
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    :root {
+      --text: #f5f5f5;
+      --muted: #b7b7b7;
+      --line: #6a6a6a;
+      --page-scale: 1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, serif;
+      color: var(--text);
+      background: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .stage {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .page {
+      width: 1920px;
+      padding: 22px 28px 18px;
+      transform: scale(var(--page-scale));
+      transform-origin: top center;
+    }
+
+    .hero {
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.1;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .authors {
+      margin: 4px 0 0;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .abstract {
+      width: min(860px, 100%);
+      margin: 8px auto 0;
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.36;
+      color: #e3e3e3;
+    }
+
+    .abstract p {
+      margin: 0;
+    }
+
+    .section-divider {
+      width: min(860px, 100%);
+      margin: 6px auto 0;
+      border: 0;
+      border-top: 2px solid var(--line);
+    }
+
+    .videos {
+      margin-top: 0;
+      padding-top: 10px;
+      border-top: 2px solid var(--line);
+      padding-bottom: 8px;
+      width: min(860px, 100%);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .platform-note {
+      width: min(860px, 100%);
+      margin: 6px auto 0;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+    }
+
+    .playback-note {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .experimental-note {
+      width: min(860px, 100%);
+      margin: 7px auto 0;
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.36;
+      color: #e3e3e3;
+    }
+
+    .experimental-note p {
+      margin: 0;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      column-gap: 10px;
+      row-gap: 8px;
+    }
+
+    .video-card {
+      padding: 0;
+      min-width: 0;
+    }
+
+    .video-title {
+      margin: 0 0 2px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #f1f1f1;
+      text-align: center;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #000000;
+    }
+
+    @media (max-width: 1100px) {
+      html, body {
+        overflow: auto;
+      }
+
+      body {
+        display: block;
+      }
+
+      .stage {
+        width: auto;
+        height: auto;
+        overflow: visible;
+        display: block;
+      }
+
+      .page {
+        width: min(100% - 20px, 1360px);
+        padding: 18px 0 24px;
+        transform: none;
+      }
+
+      .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .playback-note {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 20px, 1360px);
+        padding-top: 18px;
+      }
+
+      .hero {
+        padding: 12px 0 18px;
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        white-space: normal;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+        row-gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <main class="page">
+      <section class="hero">
+        <h1>Supplementary Videos for ELCOR-based Local Navigation</h1>
+        <p class="authors">Di Tian, Dangjun Zhao, Haijin Zeng, Liang Hu, Yikang Bin, and Junchao Zhang</p>
+        <div class="abstract">
+          <p><strong>Abstract.</strong> This page presents supplementary of eight hardware videos for our ELCOR-based local navigation method in unknown environments under onboard sensing, localization, and control. In the real-world system, <strong>AMCL is used only for localization</strong>, <strong>the map is used only for localization assistance and visualization</strong>, and <strong>the planning pipeline uses only raw 2D LiDAR points throughout navigation</strong>. The proposed approach builds a visibility-aware linear convex obstacle representation from raw 2D LiDAR observations, preserving local boundary structure while maintaining a conservative form suitable for model predictive control.</p>
+        </div>
+        <hr class="section-divider">
+        <p class="platform-note">Platform: a relatively large four-wheel differential-drive robot, <strong>18 kg</strong>, <strong>66.8 × 62.7 cm</strong>.</p>
+        <hr class="section-divider">
+        <div class="experimental-note">
+          <p><strong>Experimental Note.</strong> <strong>AMCL localization contains noticeable errors</strong> in the real-world trials. <strong>Except for Trial 1, most obstacles are not well aligned with the map</strong>, and <strong>some obstacles were moved during Trials 6 and 7</strong>. The robot still <strong>safely passed through the environment and reached the goal</strong>.</p>
+        </div>
+      </section>
+
+      <section class="videos">
+          <div class="video-grid">
+            <article class="video-card">
+              <h2 class="video-title">Trial 1</h2>
+              <video controls autoplay muted loop playsinline preload="metadata">
+                <source src="/assets/videos/elcor/test1_supplement.mp4" type="video/mp4">
+              </video>
+            </article>
+            <article class="video-card">
+              <h2 class="video-title">Trial 2</h2>
+              <video controls autoplay muted loop playsinline preload="metadata">
+                <source src="/assets/videos/elcor/test2_supplement.mp4" type="video/mp4">
+              </video>
+            </article>
+            <article class="video-card">
+              <h2 class="video-title">Trial 3</h2>
+              <video controls autoplay muted loop playsinline preload="metadata">
+                <source src="/assets/videos/elcor/test3_supplement.mp4" type="video/mp4">
+              </video>
+            </article>
+            <article class="video-card">
+              <h2 class="video-title">Trial 4</h2>
+              <video controls autoplay muted loop playsinline preload="metadata">
+                <source src="/assets/videos/elcor/test4_supplement.mp4" type="video/mp4">
+              </video>
+            </article>
+            <article class="video-card">
+              <h2 class="video-title">Trial 5</h2>
+              <video controls autoplay muted loop playsinline preload="metadata">
+                <source src="/assets/videos/elcor/test5_supplement.mp4" type="video/mp4">
+              </video>
+            </article>
+            <article class="video-card">
+              <h2 class="video-title">Trial 6</h2>
+              <video controls autoplay muted loop playsinline preload="metadata">
+                <source src="/assets/videos/elcor/test6_supplement.mp4" type="video/mp4">
+              </video>
+            </article>
+            <article class="video-card">
+              <h2 class="video-title">Trial 7</h2>
+              <video controls autoplay muted loop playsinline preload="metadata">
+                <source src="/assets/videos/elcor/test7_supplement.mp4" type="video/mp4">
+              </video>
+            </article>
+            <article class="video-card">
+              <h2 class="video-title">Trial 8</h2>
+              <video controls autoplay muted loop playsinline preload="metadata">
+                <source src="/assets/videos/elcor/test8_supplement.mp4" type="video/mp4">
+              </video>
+            </article>
+          </div>
+      </section>
+      <p class="playback-note">All videos are shown at approximately 4× playback speed.</p>
+    </main>
+  </div>
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const page = document.querySelector(".page");
+
+      function updateScale() {
+        if (!page || window.innerWidth <= 1100) {
+          root.style.setProperty("--page-scale", "1");
+          return;
+        }
+
+        const pageWidth = page.offsetWidth;
+        const pageHeight = page.scrollHeight;
+        const scaleX = window.innerWidth / pageWidth;
+        const scaleY = window.innerHeight / pageHeight;
+        const scale = Math.min(scaleX, scaleY);
+
+        root.style.setProperty("--page-scale", String(scale));
+      }
+
+      window.addEventListener("load", updateScale);
+      window.addEventListener("resize", updateScale);
+      updateScale();
+    })();
+  </script>
+</body>
+</html>
